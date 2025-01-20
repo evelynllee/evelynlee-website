@@ -1,0 +1,89 @@
+body {
+    font-family: "DM Sans", serif;
+    background-image:url("/images/background.jpg");
+    background-size: cover;
+    font-weight: Bold;
+    text-align: center;
+    color: white;
+    display: flex; /* Enables a horizontal layout */
+    flex-wrap: wrap; /* Allows content to wrap naturally */
+    align-items: center; /* Aligns vertically */
+    justify-content: flex-start;
+    
+}
+
+#name {
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    position: static;
+    text-align: left;
+    padding-top: 50px;
+    font-size: 200px;
+    padding-left: 10px;
+    padding-right: 1px
+}
+
+#title {
+    font-family: "DM Sans", serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+    position: static;
+    text-align: left;
+    font-size: 50px;
+    margin-top: -155px;
+    padding-left: 10px;
+    padding-right: 1px;
+    display: flex;
+}
+
+.introContainer{
+    width: 900px;
+}
+
+#introduction {
+    font-family: "DM Sans", serif;
+    font-size: 50px; 
+    font-weight: 300;
+    text-align: justify;
+    padding-top: 100px;
+    padding-left: 10px;
+}
+
+.vinyl-container{
+    position: static; /* Keep default positioning */
+    margin-left: auto; /* Push it to the right */
+    width: 400px; /* Maintain the vinyl size */
+    display: inline-block; /* Align properly with other elements */
+    text-align: right;
+
+}
+
+.vinyl{
+    width: 100%;
+    border-radius: 50%;
+    animation: spin 5s linear infinite;
+}
+
+.vinyl-container:hover .vinyl {
+    animation-play-state: paused;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.audio-player {
+    margin-top: 10px;
+}
+
+#songotd {
+    position: static;
+}
