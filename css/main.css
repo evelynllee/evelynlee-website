@@ -5,11 +5,61 @@ body {
     font-weight: Bold;
     text-align: center;
     color: white;
-    display: flex; /* Enables a horizontal layout */
-    flex-wrap: wrap; /* Allows content to wrap naturally */
-    align-items: center; /* Aligns vertically */
+    display: flex; 
+    flex-wrap: wrap; 
+    align-items: center;
     justify-content: flex-start;
-    
+}
+
+header {
+    position: fixed; /* Fixes the header at the top of the page */
+    top: 0; /* Aligns it to the top */
+    right: 0; /* Aligns it to the left */
+    width: 100%; /* Makes the header span the full width */
+    background-color: #43434378; /* Semi-transparent background */
+    color: white;
+    padding: 10px 20px; /* Space inside the header */
+    display: flex; /* Flexbox for navigation layout */
+    justify-content: right; /* Aligns nav content to the left */
+    align-items: center; /* Vertically aligns items */
+    z-index: 1000; /* Ensures the header stays above other elements */
+    margin: 0;
+}
+
+.navbar {
+    width: 100%; /* Take up full width */
+    max-width: 1200px; /* Optional: Limit width for large screens */
+}
+
+.nav-list {
+    list-style: none; /* Remove bullet points */
+    display: flex; /* Horizontally align items */
+    justify-content: right; /* Center the links */
+    gap: 50px; /* Add space between links */
+    margin: 30;
+    padding: 0;
+}
+
+.nav-list a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Default link color */
+    font-size: 20px;
+    font-weight: 300;
+    padding: 5px 10px; /* Add some padding around links */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+}
+
+.nav-list a:hover {
+    background-color: #ffffff; /* background on hover */
+    color: #385931; /* Optional: Highlight color */
+    border-radius: 5px; /* Optional: Rounded edges on hover */
+    font-weight: bold;
+}
+
+.nav-list a.active {
+    font-weight: bold; /* Make it stand out */
+    color: #437f37; /* Gold color for active page */
+    border-bottom: 2px solid #ffffff; /* Optional: Underline the active link */
 }
 
 #name {
@@ -19,10 +69,11 @@ body {
     font-style: normal;
     position: static;
     text-align: left;
-    padding-top: 50px;
-    font-size: 200px;
+    padding-top: 80px;
+    font-size: 150px;
     padding-left: 10px;
-    padding-right: 1px
+    padding-right: 1px;
+    margin-top: 10px;
 }
 
 #title {
@@ -32,8 +83,8 @@ body {
     font-style: normal;
     position: static;
     text-align: left;
-    font-size: 50px;
-    margin-top: -155px;
+    font-size: 30px;
+    margin-top: -120px;
     padding-left: 10px;
     padding-right: 1px;
     display: flex;
@@ -45,26 +96,32 @@ body {
 
 #introduction {
     font-family: "DM Sans", serif;
-    font-size: 50px; 
+    font-size: 44px; 
     font-weight: 300;
     text-align: justify;
-    padding-top: 100px;
+    padding-top: 25px;
     padding-left: 10px;
 }
 
 .vinyl-container{
-    position: static; /* Keep default positioning */
-    margin-left: auto; /* Push it to the right */
-    width: 400px; /* Maintain the vinyl size */
-    display: inline-block; /* Align properly with other elements */
-    text-align: right;
-
+    display: flex;
+    flex-direction: column; /* Stack vinyl and audio vertically */
+    align-items: center;
+    margin-left: 225px;
+    width: 400px;
+    text-align: center;
 }
 
-.vinyl{
+.vinyl {
     width: 100%;
     border-radius: 50%;
     animation: spin 5s linear infinite;
+    pointer-events: none;
+}
+
+.audio-player {
+    margin-top: 20px; /* Space below the vinyl */
+    z-index: 10; /* Ensure visibility */
 }
 
 .vinyl-container:hover .vinyl {
@@ -80,10 +137,3 @@ body {
     }
 }
 
-.audio-player {
-    margin-top: 10px;
-}
-
-#songotd {
-    position: static;
-}
