@@ -12,54 +12,54 @@ body {
 }
 
 header {
-    position: fixed; /* Fixes the header at the top of the page */
-    top: 0; /* Aligns it to the top */
-    right: 0; /* Aligns it to the left */
-    width: 100%; /* Makes the header span the full width */
-    background-color: #43434378; /* Semi-transparent background */
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    width: 100%;
+    background-color: #43434378; 
     color: white;
-    padding: 10px 20px; /* Space inside the header */
-    display: flex; /* Flexbox for navigation layout */
-    justify-content: right; /* Aligns nav content to the left */
-    align-items: center; /* Vertically aligns items */
-    z-index: 1000; /* Ensures the header stays above other elements */
+    padding: 10px 20px;
+    display: flex; 
+    justify-content: right; 
+    align-items: center; 
+    z-index: 1000;
     margin: 0;
 }
 
 .navbar {
-    width: 100%; /* Take up full width */
-    max-width: 1200px; /* Optional: Limit width for large screens */
+    width: 100%; 
+    max-width: 1200px;
 }
 
 .nav-list {
-    list-style: none; /* Remove bullet points */
-    display: flex; /* Horizontally align items */
-    justify-content: right; /* Center the links */
-    gap: 50px; /* Add space between links */
+    list-style: none; 
+    display: flex;
+    justify-content: right;
+    gap: 50px;
     margin: 30;
     padding: 0;
 }
 
 .nav-list a {
-    text-decoration: none; /* Remove underline */
-    color: white; /* Default link color */
+    text-decoration: none; 
+    color: white; 
     font-size: 20px;
     font-weight: 300;
-    padding: 5px 10px; /* Add some padding around links */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+    padding: 5px 10px; 
+    transition: background-color 0.3s ease, color 0.3s ease; 
 }
 
 .nav-list a:hover {
-    background-color: #ffffff; /* background on hover */
-    color: #385931; /* Optional: Highlight color */
-    border-radius: 5px; /* Optional: Rounded edges on hover */
+    background-color: #ffffff; 
+    color: #385931; 
+    border-radius: 5px; 
     font-weight: bold;
 }
 
 .nav-list a.active {
-    font-weight: bold; /* Make it stand out */
-    color: #437f37; /* Gold color for active page */
-    border-bottom: 2px solid #ffffff; /* Optional: Underline the active link */
+    font-weight: bold;
+    color: #437f37; 
+    border-bottom: 2px solid #ffffff; 
 }
 
 #name {
@@ -107,8 +107,8 @@ header {
     display: flex;
     flex-direction: column; /* Stack vinyl and audio vertically */
     align-items: center;
-    margin-left: 225px;
-    width: 400px;
+    margin-left: 270px;
+    width: 300px;
     text-align: center;
 }
 
@@ -120,8 +120,8 @@ header {
 }
 
 .audio-player {
-    margin-top: 20px; /* Space below the vinyl */
-    z-index: 10; /* Ensure visibility */
+    margin-top: 20px;
+    z-index: 10; 
 }
 
 .vinyl-container:hover .vinyl {
